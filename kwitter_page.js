@@ -1,13 +1,13 @@
 //YOUR FIRE BASE LINKS
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDY0MCLZcdndR7V8pGu0zjH7Nc8J7cXxmY",
-  authDomain: "adminapp-fc199.firebaseapp.com",
-  databaseURL: "https://adminapp-fc199-default-rtdb.firebaseio.com",
-  projectId: "adminapp-fc199",
-  storageBucket: "adminapp-fc199.appspot.com",
-  messagingSenderId: "251935762676",
-  appId: "1:251935762676:web:0d83d83f196c4ff1aa56a1"
+  apiKey: "AIzaSyDk8HdEc_iK3BoqKfG51RQ6EoH3aRwIcl4",
+  authDomain: "kwitterapp-590a6.firebaseapp.com",
+  databaseURL: "https://kwitterapp-590a6-default-rtdb.firebaseio.com",
+  projectId: "kwitterapp-590a6",
+  storageBucket: "kwitterapp-590a6.appspot.com",
+  messagingSenderId: "660218893672",
+  appId: "1:660218893672:web:50a305c72182887844b2dd"
 };
 
 // Initialize Firebase
@@ -34,10 +34,10 @@ function getData() { firebase.database().ref("/"+room_name).on('value', function
 //Start code
          console.log(firebase_message_id);
 	       console.log(message_data);
-	       name = message_data['name'];
+	       name1 = message_data['name'];
 	       message = message_data['message'];
          like = message_data['like'];
-         name_with_tag = "<h4> "+ name +"<img class='user_tick' src='tick.png'></h4>";
+         name_with_tag = "<h4> "+ name1 +"<img class='user_tick' src='tick.png'></h4>";
          message_with_tag = "<h4 class='message_h4'>" + message + "</h4>";
 like_button ="<button class='btn btn-warning' id="+firebase_message_id+" value="+like+" onclick='updateLike(this.id)'>";
          span_with_tag = "<span class='glyphicon glyphicon-thumbs-up'>Like: "+ like +"</span></button><hr>";
